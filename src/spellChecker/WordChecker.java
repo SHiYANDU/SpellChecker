@@ -1,6 +1,12 @@
 package spellChecker;
 import java.util.*;
 //check the spelling of the word
+/**class which contains in it the set of word and dictionary, it perform check with these two sets
+ * it need to be an instance with correct parameters and its method perform the check and return correction map
+ * @author ShiYan
+ * @version 1.0
+ * @since 2017-04-30
+ */
 public class WordChecker{
 
 	private Set<String> word;
@@ -13,6 +19,10 @@ public class WordChecker{
 		word=inputWord;
 		dict=inputDict;
 	}
+	/**check the map with the two set stored in the object
+	 * this will check each word with the dictionary parallelly and provoke a Correction Proposer window for each, putting the wrong-corrected pair into output map
+	 * @return the map of wrongword-correction pairs
+	 */
 //  spell checking method. return a Map with key as words to correct
 	public Map<String,String> check(){
 		
@@ -33,7 +43,12 @@ public class WordChecker{
 		
 		return corr;
 	}
-
+	/**The class implementing Runnable interface to be used to initialize a thread 
+	 * this provide functionality to the thread to verify the word and ask for correction
+	 * @author ShiYan
+	 * @version 1.0
+	 * @since 2017-04-30
+	 */
 //	runnable interface for check one word in thread
 	public class Checker implements Runnable{
 //		the word to check
@@ -42,6 +57,9 @@ public class WordChecker{
 		public Checker(String input){
 			singleword=input;
 		}
+		/** the run method implemented to be started in thread
+		 *  the thread manipulates the thread-safe synchronized Map correction and put the resulting pairs in it
+		 */
 //		the run method for thread
 		public void run(){
 			

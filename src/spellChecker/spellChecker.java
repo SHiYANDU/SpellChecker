@@ -1,6 +1,11 @@
 package spellChecker;
 import java.util.*;
-
+/**This spellchecker will ask for path to document by GUI
+ * The corrected text will be stored in selected location
+ * @author ShiYan
+ * @version 1.0
+ * @since 2017-04-30
+ */
 public class spellChecker {
 	
 	public static void main(String args[]){

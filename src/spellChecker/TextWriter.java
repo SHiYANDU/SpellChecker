@@ -1,7 +1,12 @@
 package spellChecker;
 import java.io.*;
 import java.util.*;
-
+/**This class provide functionality to correct the old text and store into new text
+ * This class have instance of variables and need to have an instance initialized and call the write()
+ * @author ShiYan
+ * @version 1.0
+ * @since 2017-04-30
+ */
 // this class contains functionalities of rewrite and save the text with appropriate correction
 public class TextWriter {
 //	the path of the text to be rewritten
@@ -11,12 +16,21 @@ public class TextWriter {
 //	the destination path of storing new text
 	private String newPath;
 //	constructor initializing variables
+	/**The constructor initializing correction map, and path of files to be read and write
+	 * 
+	 * @param text the path of the text to be corrected
+	 * @param corr the wrong-correction map from wordchecker
+	 * @param destination the path of the place to store new text
+	 */
 	public TextWriter(String text, Map<String,String> corr, String destination){
 		textPath=text;
 		correction=corr;
 		newPath=destination;
 		
 	}
+	/**The write method called on the instance
+	 * Read, correct and write new text to newPath
+	 */
 //	correct and write the text to new file
 	public void write(){
 //		try to open the old text and store into string

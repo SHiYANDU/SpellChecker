@@ -5,6 +5,12 @@ import javax.swing.filechooser.*;
 
 import java.io.*;
 //choose a file by GUI
+/**This class provide functionality to call a GUI file chooser to choose the path of file
+ * either to be read or to be writed
+ * @author ShiYan
+ * @version 1.0
+ * @since 2017-04-30
+ */
 public class FileChooser {
 //	static file chooser method to be used to get path
 	public static String chooseFile(){

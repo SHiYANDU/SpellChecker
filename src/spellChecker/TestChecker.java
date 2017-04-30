@@ -5,12 +5,21 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.*;
+/**Unit test class for wordchecker functionality
+ * 
+ * @author ShiYan
+ * @version 1.0
+ * @since 2017-04-30
+ */
 public class TestChecker {
 
 	Set<String> text;
 	Set<String> dict;
 	Map<String,String> corr;
-	
+	/**Set up the initial value of the two set to be checked
+	 * 
+	 * @throws Exception
+	 */
 	@Before
 	public void setUp() throws Exception {
 		text=new HashSet<String>();
