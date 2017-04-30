@@ -18,10 +18,9 @@ public class TestChecker {
 	Map<String,String> corr;
 	/**Set up the initial value of the two set to be checked
 	 * 
-	 * @throws Exception
 	 */
 	@Before
-	public void setUp() throws Exception {
+	public void setUp()  {
 		text=new HashSet<String>();
 		dict=new HashSet<String>();
 		corr=new HashMap<String,String>();
