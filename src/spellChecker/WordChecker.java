@@ -47,7 +47,7 @@ public class WordChecker{
 			
 //			if the dictionary does not contain word, put the word as a key in corr
 			if (!dict.contains(singleword)){
-				System.out.println(singleword);
+				
 //				instantiate the GUI object to ask for correction
 				CorrectionProposer proposer = new CorrectionProposer(singleword);
 //				wait until action is performed in proposer GUI
